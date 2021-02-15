@@ -14,7 +14,7 @@ module.exports = server;
 
 //session config
 const sessionConfig = {
-    name:'no-session',
+    name:'a-session',
     secret: 'keep it secret keep it safe',
     cookie:{
         maxAge: 60 * 60 * 1000,
@@ -32,12 +32,12 @@ const sessionConfig = {
     })
 }
 
-//middlewares/routers
+//middlewares && routers
 server.use(express.json(), session(sessionConfig),logger('short'), cors(), helmet())
-server.use('/api/auth/', authRouter)
-server.use('/api/users/', usersRouter)
+server.use('/api/auth', authRouter)
+server.use('/api/users', usersRouter)
 
 //routes
-server.get('/', (req, res)=>{
+server.get('/api', (req, res)=>{
     res.status(200).json({message: `Hi, welcome in.`});
 });

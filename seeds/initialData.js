@@ -8,8 +8,6 @@ exports.seed = function(knex) {
         {username: 'user1', password: 'password', department: 'Hosting'},
         {username: 'user2', password: 'password', department: 'Sales'},
         {username: 'user3', password: 'password', department: 'Sales'},
-        {username: 'user4', password: 'password', department: 'Sales'},
-        {username: 'user5', password: 'password', department: 'Hosting'},
         {username: 'user6', password: 'password', department: 'Hosting'},
         {username: 'manager', password: 'password', department: 'Admin'},
         {username: 'manager2', password: 'password', department: 'Admin'},

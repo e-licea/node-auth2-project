@@ -1,0 +1,16 @@
+.App {
+  background-color: #282c34;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4%;
+}
+html,
+#root,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
