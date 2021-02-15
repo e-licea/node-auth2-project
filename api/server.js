@@ -6,8 +6,6 @@ const authRouter = require('./auth/authRouter');
 const usersRouter = require('./users/usersRouter');
 const session = require('express-session')
 const logger = require('morgan');
-const cors = require('cors');
-const helmet = require('helmet');
 const KnexSessionStore = require('connect-session-knex')(session);
 //export
 module.exports = server;
@@ -33,7 +31,7 @@ const sessionConfig = {
 }
 
 //middlewares && routers
-server.use(express.json(), session(sessionConfig),logger('short'), cors(), helmet())
+server.use(express.json(), session(sessionConfig),logger('short'))
 server.use('/api/auth', authRouter)
 server.use('/api/users', usersRouter)
 
